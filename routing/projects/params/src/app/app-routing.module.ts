@@ -6,6 +6,7 @@ import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [{path: '', component: HomeComponent},
 {path: 'product', component: ProductDetailComponent},
+{path: 'product/:id', component: ProductDetailComponent},
 {path: '**', component: Error404Component}];
 
 @NgModule({
