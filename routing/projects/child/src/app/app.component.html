@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <a [routerLink]="['/']">HOME</a>
+  <a [routerLink]="['/product']" [queryParams]="{category: 'sport'}" skipLocationChange>Product</a>
+  <a [routerLink]="['/product', productId]" skipLocationChange>Product com id</a>
+</div>
+<button (click)="navigateToProductDetail()">Product</button>
+<router-outlet></router-outlet>
