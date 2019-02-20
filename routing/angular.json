@@ -514,6 +514,134 @@
           }
         }
       }
+    },
+    "guards": {
+      "root": "projects/guards/",
+      "sourceRoot": "projects/guards/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/guards",
+            "index": "projects/guards/src/index.html",
+            "main": "projects/guards/src/main.ts",
+            "polyfills": "projects/guards/src/polyfills.ts",
+            "tsConfig": "projects/guards/tsconfig.app.json",
+            "assets": [
+              "projects/guards/src/favicon.ico",
+              "projects/guards/src/assets"
+            ],
+            "styles": [
+              "projects/guards/src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/guards/src/environments/environment.ts",
+                  "with": "projects/guards/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "guards:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "guards:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "guards:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/guards/src/test.ts",
+            "polyfills": "projects/guards/src/polyfills.ts",
+            "tsConfig": "projects/guards/tsconfig.spec.json",
+            "karmaConfig": "projects/guards/karma.conf.js",
+            "styles": [
+              "projects/guards/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/guards/src/favicon.ico",
+              "projects/guards/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/guards/tsconfig.app.json",
+              "projects/guards/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "guards-e2e": {
+      "root": "projects/guards-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/guards-e2e/protractor.conf.js",
+            "devServerTarget": "guards:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "guards:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/guards-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "routing"
