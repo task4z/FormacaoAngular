@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <p class="luxuria">luxury mesmo impec</p>
   `,
-  styles: ['luxuria{background-color:orange;}']
+  styles: ['.luxuria{background:orange;}']
 })
 export class LuxuryComponent implements OnInit {
 
