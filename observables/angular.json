@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dependencyinjection": {
+    "observables": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dependencyinjection",
+            "outputPath": "dist/observables",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dependencyinjection:build"
+            "browserTarget": "observables:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dependencyinjection:build:production"
+              "browserTarget": "observables:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dependencyinjection:build"
+            "browserTarget": "observables:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "dependencyinjection-e2e": {
+    "observables-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "dependencyinjection:serve"
+            "devServerTarget": "observables:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dependencyinjection:serve:production"
+              "devServerTarget": "observables:serve:production"
             }
           }
         },
@@ -259,9 +259,9 @@
         }
       }
     },
-    "switching": {
-      "root": "projects/switching/",
-      "sourceRoot": "projects/switching/src",
+    "fromevent": {
+      "root": "projects/fromevent/",
+      "sourceRoot": "projects/fromevent/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -269,17 +269,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/switching",
-            "index": "projects/switching/src/index.html",
-            "main": "projects/switching/src/main.ts",
-            "polyfills": "projects/switching/src/polyfills.ts",
-            "tsConfig": "projects/switching/tsconfig.app.json",
+            "outputPath": "dist/fromevent",
+            "index": "projects/fromevent/src/index.html",
+            "main": "projects/fromevent/src/main.ts",
+            "polyfills": "projects/fromevent/src/polyfills.ts",
+            "tsConfig": "projects/fromevent/tsconfig.app.json",
             "assets": [
-              "projects/switching/src/favicon.ico",
-              "projects/switching/src/assets"
+              "projects/fromevent/src/favicon.ico",
+              "projects/fromevent/src/assets"
             ],
             "styles": [
-              "projects/switching/src/styles.css"
+              "projects/fromevent/src/styles.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -288,8 +288,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/switching/src/environments/environment.ts",
-                  "with": "projects/switching/src/environments/environment.prod.ts"
+                  "replace": "projects/fromevent/src/environments/environment.ts",
+                  "with": "projects/fromevent/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -314,34 +314,34 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "switching:build"
+            "browserTarget": "fromevent:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "switching:build:production"
+              "browserTarget": "fromevent:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "switching:build"
+            "browserTarget": "fromevent:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/switching/src/test.ts",
-            "polyfills": "projects/switching/src/polyfills.ts",
-            "tsConfig": "projects/switching/tsconfig.spec.json",
-            "karmaConfig": "projects/switching/karma.conf.js",
+            "main": "projects/fromevent/src/test.ts",
+            "polyfills": "projects/fromevent/src/polyfills.ts",
+            "tsConfig": "projects/fromevent/tsconfig.spec.json",
+            "karmaConfig": "projects/fromevent/karma.conf.js",
             "styles": [
-              "projects/switching/src/styles.css"
+              "projects/fromevent/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/switching/src/favicon.ico",
-              "projects/switching/src/assets"
+              "projects/fromevent/src/favicon.ico",
+              "projects/fromevent/src/assets"
             ]
           }
         },
@@ -349,8 +349,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/switching/tsconfig.app.json",
-              "projects/switching/tsconfig.spec.json"
+              "projects/fromevent/tsconfig.app.json",
+              "projects/fromevent/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -359,27 +359,27 @@
         }
       }
     },
-    "switching-e2e": {
-      "root": "projects/switching-e2e/",
+    "fromevent-e2e": {
+      "root": "projects/fromevent-e2e/",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/switching-e2e/protractor.conf.js",
-            "devServerTarget": "switching:serve"
+            "protractorConfig": "projects/fromevent-e2e/protractor.conf.js",
+            "devServerTarget": "fromevent:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "switching:serve:production"
+              "devServerTarget": "fromevent:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "projects/switching-e2e/tsconfig.e2e.json",
+            "tsConfig": "projects/fromevent-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -387,9 +387,9 @@
         }
       }
     },
-    "observables": {
-      "root": "projects/observables/",
-      "sourceRoot": "projects/observables/src",
+    "switchmap": {
+      "root": "projects/switchmap/",
+      "sourceRoot": "projects/switchmap/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -397,17 +397,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/observables",
-            "index": "projects/observables/src/index.html",
-            "main": "projects/observables/src/main.ts",
-            "polyfills": "projects/observables/src/polyfills.ts",
-            "tsConfig": "projects/observables/tsconfig.app.json",
+            "outputPath": "dist/switchmap",
+            "index": "projects/switchmap/src/index.html",
+            "main": "projects/switchmap/src/main.ts",
+            "polyfills": "projects/switchmap/src/polyfills.ts",
+            "tsConfig": "projects/switchmap/tsconfig.app.json",
             "assets": [
-              "projects/observables/src/favicon.ico",
-              "projects/observables/src/assets"
+              "projects/switchmap/src/favicon.ico",
+              "projects/switchmap/src/assets"
             ],
             "styles": [
-              "projects/observables/src/styles.css"
+              "projects/switchmap/src/styles.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -416,8 +416,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/observables/src/environments/environment.ts",
-                  "with": "projects/observables/src/environments/environment.prod.ts"
+                  "replace": "projects/switchmap/src/environments/environment.ts",
+                  "with": "projects/switchmap/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -442,34 +442,34 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "observables:build"
+            "browserTarget": "switchmap:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "observables:build:production"
+              "browserTarget": "switchmap:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "observables:build"
+            "browserTarget": "switchmap:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/observables/src/test.ts",
-            "polyfills": "projects/observables/src/polyfills.ts",
-            "tsConfig": "projects/observables/tsconfig.spec.json",
-            "karmaConfig": "projects/observables/karma.conf.js",
+            "main": "projects/switchmap/src/test.ts",
+            "polyfills": "projects/switchmap/src/polyfills.ts",
+            "tsConfig": "projects/switchmap/tsconfig.spec.json",
+            "karmaConfig": "projects/switchmap/karma.conf.js",
             "styles": [
-              "projects/observables/src/styles.css"
+              "projects/switchmap/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/observables/src/favicon.ico",
-              "projects/observables/src/assets"
+              "projects/switchmap/src/favicon.ico",
+              "projects/switchmap/src/assets"
             ]
           }
         },
@@ -477,8 +477,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/observables/tsconfig.app.json",
-              "projects/observables/tsconfig.spec.json"
+              "projects/switchmap/tsconfig.app.json",
+              "projects/switchmap/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -487,27 +487,27 @@
         }
       }
     },
-    "observables-e2e": {
-      "root": "projects/observables-e2e/",
+    "switchmap-e2e": {
+      "root": "projects/switchmap-e2e/",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/observables-e2e/protractor.conf.js",
-            "devServerTarget": "observables:serve"
+            "protractorConfig": "projects/switchmap-e2e/protractor.conf.js",
+            "devServerTarget": "switchmap:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "observables:serve:production"
+              "devServerTarget": "switchmap:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "projects/observables-e2e/tsconfig.e2e.json",
+            "tsConfig": "projects/switchmap-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -516,5 +516,5 @@
       }
     }
   },
-  "defaultProject": "dependencyinjection"
+  "defaultProject": "observables"
 }

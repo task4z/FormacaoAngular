@@ -1,0 +1,12 @@
+/////// LIVROS ////////
+http://exploringjs.com/es6/index.html#toc_ch_modules
+https://eloquentjavascript.net/
+https://blog.nrwl.io/essential-angular-7-blog-posts-book-7f7d9923773d
+
+///// ESTATISTICAS /////////
+https://2018.stateofjs.com/
+
+
+/////// FUNCOES ////////
+https://rxmarbles.com/
+
