@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <h1>OBSERVABLS ASYNC</h1>
+  <p>{{numbers$ | async }}</p>
+  <p>{{numbers}}</p>
+<ul>
+  <li *ngFor="let product of products$ | async">
+    {{product.title}} - {{product.price | currency:'EUR'}}
+  </li>
+</ul>

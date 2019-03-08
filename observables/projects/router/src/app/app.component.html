@@ -1,0 +1,8 @@
+<h1>OBSERVABLES ROUTER</h1>
+<ul>
+  <li *ngFor="let product of products" (click)="onSelect(product)">
+    {{product.id}} - {{product.description}}
+  </li>
+</ul>
+<hr/>
+<router-outlet></router-outlet>

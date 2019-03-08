@@ -1,0 +1,5 @@
+<h1>OUTPUT EXAMPLE</h1>
+<div>
+  App component received: {{priceQuoter?.stockSymbol}} - {{priceQuoter?.lastPrice}}
+</div>
+<price-quoter (lastPrice)="priceQuoteHandler($event)"></price-quoter>
