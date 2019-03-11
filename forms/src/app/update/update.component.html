@@ -1,0 +1,10 @@
+<h2>Form Update</h2>
+
+<form [formGroup]="formModel">
+  <div>Product ID: <input type="text" formControlName="id"/></div>
+  <div>description: <input type="text" formControlName="description"/></div>
+  <div>seller: <input type="text" formControlName="seller"/></div>
+</form>
+<button (click)="updateEntireForm()">Populate</button>
+<button (click)="updatePartForm()">Upddate</button>
+<button (click)="resetForm()">Reset</button>

@@ -1,0 +1,18 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <div>
+    <label>Username:</label>
+    <input type="text" name="username" ngModel>
+  </div>
+  <div>
+    <label>SS:</label>
+    <input type="text" name="ss" ngModel>
+  </div>
+  <div ngModelGroup="passwordsGroup">
+    <label>Password:</label>
+    <input type="password" name="password" ngModel>
+    <label>Confirm Password:</label>
+    <input type="password" name="pconfirm" ngModel>
+  </div>
+  <button type="submit">submit</button>
+</form>
+<pre>{{f.value | json}}</pre>

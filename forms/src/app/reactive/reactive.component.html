@@ -1,0 +1,18 @@
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Username:</label>
+      <input type="text" formControlName="username">
+    </div>
+    <div>
+      <label>SS:</label>
+      <input type="text" formControlName="ss">
+    </div>
+    <div formGroupName="passwords">
+      <label>Password:</label>
+      <input type="password" formControlName="password">
+      <label>Confirm Password:</label>
+      <input type="password" formControlName="pconfirm">
+    </div>
+    <button type="submit">submit</button>
+  </form>
+  <pre>{{formModel.value | json}}</pre>

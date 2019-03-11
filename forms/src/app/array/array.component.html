@@ -1,0 +1,13 @@
+<h2>Form Array</h2>
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+  EMAILS:
+  <button type="button" (click)="addEmail()">add email</button>
+
+  <ul formArrayName="emails">
+    <li *ngFor="let email of formModel.get('emails').controls; let i=index">
+      <input type="email" [formControlName]="i">
+    </li>
+  </ul>
+  <button>submit</button>
+</form>
+<pre>{{formModel.value | json}}</pre>

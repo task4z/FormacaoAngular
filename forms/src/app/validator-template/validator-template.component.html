@@ -1,0 +1,18 @@
+<h2>Validator Template Driven</h2>
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+<div>
+  PHONE:
+  <input type="text" name="telephone" ngModel
+  required
+  minlength="5"
+  pattern="[0-9]*"
+  #phone="ngModel"
+  />
+  <div [hidden]="phone.valid || phone.pristine">
+    <div [hidden]="!phone.hasError('required')">necessário valor</div>
+    <div [hidden]="!phone.hasError('minlength')">minimo 5 caracteres</div>
+    <div [hidden]="!phone.hasError('pattern')">só aceita numeros</div>
+  </div>
+</div>
+<button type="submit" [disabled]="!f.valid">Submeter</button>
+</form>

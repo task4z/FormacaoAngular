@@ -10,3 +10,7 @@ https://2018.stateofjs.com/
 /////// FUNCOES ////////
 https://rxmarbles.com/
 
+/////// ARTIGOS ////////
+bit.ly/changedetection
+essentialangular
+
