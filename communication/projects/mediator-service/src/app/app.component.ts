@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
     random2.next(Math.random());
     let observerBehaviorSubject1 = random2.subscribe(arg => console.log(`ObserverBehaviorSubject1: ${arg}`));
     let observerBehaviorSubject2 = random2.subscribe(arg => console.log(`ObserverBehaviorSubject2: ${arg}`));
+    //subject so emite quando tem nova subscrição
+    //behavior subject emite o ultimo valor apos subscricao so
     console.log('---------------');
     let random3 = new Subject();
     random3.next('b');
