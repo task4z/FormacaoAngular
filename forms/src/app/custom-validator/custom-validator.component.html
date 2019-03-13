@@ -1,0 +1,9 @@
+<h2>Reactive validator</h2>
+<form [formGroup]="formModel" (ngSubmit)="onSubmit(formModel.value)">
+<div>
+  SS:
+  <input type="text" formControlName="fcnss"/>
+    <div [hidden]="!formModel.hasError('ss', 'fcnss')">{{formModel.getError('ss','fcnss')?.description}}</div>
+</div>
+<button type="submit" [disabled]="!formModel.valid">Submeter</button>
+</form>

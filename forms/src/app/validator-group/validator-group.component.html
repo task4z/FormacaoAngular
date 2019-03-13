@@ -1,0 +1,22 @@
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Username:</label>
+    <input type="text" formControlName="username">
+    <span [hidden]="!formModel.hasError('required','username')">username required</span>
+  </div>
+  <div>
+    <label>SS:</label>
+    <input type="text" formControlName="ss">
+    <span [hidden]="!formModel.hasError('ssn','ss')">ss invalid</span>
+  </div>
+  <div formGroupName="passwords">
+    <label>Password:</label>
+    <input type="password" formControlName="password">
+    <span [hidden]="!formModel.hasError('minlength',['passwords','password'])">password minima</span>
+    <label>Confirm Password:</label>
+    <input type="password" formControlName="pconfirm">
+    <span [hidden]="!formModel.hasError('equal','passwords')">passwords não condizem</span>
+  </div>
+  <button type="submit">submit</button>
+</form>
+<pre>{{formModel.value | json}}</pre>

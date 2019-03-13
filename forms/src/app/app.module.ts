@@ -10,6 +10,9 @@ import { ArrayComponent } from './array/array.component';
 import { UpdateComponent } from './update/update.component';
 import { BuilderComponent } from './builder/builder.component';
 import { ValidatorTemplateComponent } from './validator-template/validator-template.component';
+import { ValidatorReactiveComponent } from './validator-reactive/validator-reactive.component';
+import { CustomValidatorComponent } from './custom-validator/custom-validator.component';
+import { ValidatorGroupComponent } from './validator-group/validator-group.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ValidatorTemplateComponent } from './validator-template/validator-templ
     ArrayComponent,
     UpdateComponent,
     BuilderComponent,
-    ValidatorTemplateComponent
+    ValidatorTemplateComponent,
+    ValidatorReactiveComponent,
+    CustomValidatorComponent,
+    ValidatorGroupComponent
   ],
   imports: [
     BrowserModule,

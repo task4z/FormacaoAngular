@@ -1,0 +1,13 @@
+<h2>Reactive validator</h2>
+<form [formGroup]="formModel" (ngSubmit)="onSubmit(formModel.value)">
+<div>
+  PHONE:
+  <input type="text" name="telephone" formControlName="phone"/>
+  <div [hidden]="formModel.valid || formModel.pristine">
+    <div [hidden]="!formModel.hasError('required', 'phone')">necessário valor</div>
+    <div [hidden]="!formModel.hasError('minlength', 'phone')">minimo 5 caracteres</div>
+    <div [hidden]="!formModel.hasError('pattern', 'phone')">só aceita numeros</div>
+  </div>
+</div>
+<button type="submit" [disabled]="!formModel.valid">Submeter</button>
+</form>
